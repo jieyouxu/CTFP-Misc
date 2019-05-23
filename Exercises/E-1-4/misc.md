@@ -43,6 +43,6 @@ A directed graph satisfies the requirements of
 2. Associative composition
 3. Each node has an identity edge (a self-loop)
 
-When each node of the graph is has an outwards edge to every node in the graph,
+When each node of the graph has an outwards edge to every node in the graph,
 including itself. There is probably a stronger / more specific constraint than 
 this.
