@@ -11,3 +11,5 @@ const memoize = f => {
         return cache[x];
     };
 };
+
+export { memoize };
