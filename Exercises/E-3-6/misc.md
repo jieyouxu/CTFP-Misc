@@ -97,3 +97,45 @@ This relation is also a partial order since:
 1. **Antisymmetric**. If there are two types `A` and `B` such that `A` and `B`
 are subtypes of each other in that they can be passed into `f(*A)` and `g(*B)`
 both without triggering a compilation error, then `A` must be equal to `B`.
+
+## Q3
+
+Given `Bool` is defined as
+
+```haskell
+data Bool = True | False
+```
+
+It forms two monoids, with operators `(&&)` and `(||)` respectively.
+
+### AND-Bool Monoid
+
+Let there be two objects in the monoid, `True` and `False`.
+
+Then the monoid can be defined as
+
+```haskell
+instance Monoid Bool where
+    mempty = True
+    mappend = (&&)
+```
+
+| `(&&)`  | `True`  | `False` |
+|---------|---------|---------|
+| `True`  | `True`  | `False` |
+| `False` | `False` | `False` |
+
+### OR-Bool Monoid
+
+The monoid can be defined as
+
+```haskell
+instance Monoid Bool where
+    mempty = False
+    mappend = (||)
+```
+
+| `(||)`  | `True`  | `False` |
+|---------|---------|---------|
+| `True`  | `True`  | `True`  |
+| `False` | `True`  | `False` |
