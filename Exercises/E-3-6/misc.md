@@ -121,7 +121,7 @@ instance Monoid Bool where
 ```
 
 | `(&&)`  | `True`  | `False` |
-|---------|---------|---------|
+| ------- | ------- | ------- |
 | `True`  | `True`  | `False` |
 | `False` | `False` | `False` |
 
@@ -136,7 +136,7 @@ instance Monoid Bool where
 ```
 
 | `(||)`  | `True` | `False` |
-|---------|--------|---------|
+| ------- | ------ | ------- |
 | `True`  | `True` | `True`  |
 | `False` | `True` | `False` |
 
