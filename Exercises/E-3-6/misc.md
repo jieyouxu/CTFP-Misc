@@ -42,3 +42,17 @@ respectively.
 - Let the directed edge be the morphism `a -> b`.
 
 Then this forms a category with two objects.
+
+### Q1(d)
+
+A free category `C` can be generated from a graph with:
+
+1. 1 node
+2. 26 directed arrows, marked as `a`, `b`, ..., `z`
+
+- Let the single node be the single object `\alpha` in the category `C`
+- Let each of the directed arrows `a`, `b`, ..., `z` be identity morphisms
+`a -> a`.
+
+Then this forms a monoid category, with `HomSet(a, a)` consisting of 
+`{a, b, ..., z}`.
