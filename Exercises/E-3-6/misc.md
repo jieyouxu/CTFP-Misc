@@ -28,3 +28,17 @@ A free category `C` can be generated from a graph with
 
 Then this forms a monoid category, with the identity morphism being trivially
 composable and is associative.
+
+### Q1(c)
+
+A free category `C` can be generated from a graph with:
+
+1. 2 nodes, `a` and `b`
+2. 1 directed edge, `a -> b`
+
+- Let the two nodes correspond to the objects `a` and `b` of category `C` 
+respectively.
+- Add identity morphisms `a -> a` and `b -> b`.
+- Let the directed edge be the morphism `a -> b`.
+
+Then this forms a category with two objects.
