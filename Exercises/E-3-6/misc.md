@@ -135,10 +135,10 @@ instance Monoid Bool where
     mappend = (||)
 ```
 
-| `(||)`  | `True`  | `False` |
-|---------|---------|---------|
-| `True`  | `True`  | `True`  |
-| `False` | `True`  | `False` |
+| `(||)`  | `True` | `False` |
+|---------|--------|---------|
+| `True`  | `True` | `True`  |
+| `False` | `True` | `False` |
 
 ## Q4
 
