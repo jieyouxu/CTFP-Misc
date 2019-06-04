@@ -56,3 +56,18 @@ A free category `C` can be generated from a graph with:
 
 Then this forms a monoid category, with `HomSet(a, a)` consisting of 
 `{a, b, ..., z}`.
+
+## Q2
+
+### Q2(a)
+
+A set of sets with inclusion relation
+
+> A is included in B iff every element of A is also an element of B
+
+Then this relation is a preorder as it is:
+
+1. **Reflexive**. Every element of `A` is trivially element of `A`, hence A is
+trivially included in `A`.
+2. **Transitive**. If `A` is included in `B`, and `B` is included in `C`, then
+it is the case that every element in `A` is in `C` too by implication.
