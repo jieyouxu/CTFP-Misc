@@ -164,4 +164,20 @@ id . (&& False) = (&& False)
 id . id = id
 ```
 
-Reference: [awalterschulze](https://github.com/awalterschulze/category-theory-for-programmers-challenges/blob/master/103-Categories-Great-and-Small.md)
+Reference: [awalterschulze](https://github.com/awalterschulze/category-theory-for-programmers-challenges/blob/master/103-Categories-Great-and-Small.md).
+
+## Q5
+
+Represent `(mod 3) . (+)` with `Int` as a monoid category (addition modulo 3).
+
+There are three equivalence classes on `+ mod 3`, namely `[0]`, `[1]` and `[2]`.
+
+Then there are three morphisms, with `add0` being the identity morphism since 
+`0` is the neutral element.
+
+```haskell
+add0 = (`mod` 3) . (+ 0)
+add1 = (`mod` 3) . (+ 1)
+add2 = (`mod` 3) . (+ 2)
+id = add0
+```
