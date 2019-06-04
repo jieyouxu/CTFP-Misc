@@ -139,3 +139,29 @@ instance Monoid Bool where
 |---------|---------|---------|
 | `True`  | `True`  | `True`  |
 | `False` | `True`  | `False` |
+
+## Q4
+
+Represent `Bool` monoid and `(&&)` as a category.
+
+There may be two morphisms as partially applied `(&&)` functions
+
+```haskell
+(&& True) :: Bool -> Bool
+(|| False) :: Bool -> Bool
+```
+
+Then since `True` is the neutral element, `(&& True)` is in fact the identity
+morphism.
+
+They can be composed as
+
+```haskell
+id = (&& True)
+id . (&& False) = (&& False)
+(&& False) . (&& False) = (&& False)
+(&& False) . id = (&& False)
+id . id = id
+```
+
+Reference: [awalterschulze](https://github.com/awalterschulze/category-theory-for-programmers-challenges/blob/master/103-Categories-Great-and-Small.md)
