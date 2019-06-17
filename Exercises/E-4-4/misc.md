@@ -25,7 +25,7 @@ std::function<optional<C>(A)> composeOptional(
         if (b.isValid())
             return g(b.value());
         else
-            // Should `f` be ill-defined for `a`, i,e. `f(a) = Nothing`
+            // Should `f` be ill-defined for `a`, i,e. `f(a) == Nothing`
             // Then we directly short-circuit and return `Nothing`.
             // This is analogous to composing the `Maybe` monad with
             // the Kleisli arrow `(>=>)`, or monadic composition `chain`, with
@@ -62,4 +62,11 @@ optional<double> safe_reciprocal(double n)
         // Just Double
         return optional<double>{ 1/x };
 }
+```
+
+## Q3
+
+```c++
+optional<double> safe_root_reciprocal =
+    composeOptional(safe_reciprocal, safe_root);
 ```
