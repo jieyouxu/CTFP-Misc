@@ -25,6 +25,13 @@ std::function<optional<C>(A)> composeOptional(
         if (b.isValid())
             return g(b.value());
         else
+            // Should `f` be ill-defined for `a`, i,e. `f(a) = Nothing`
+            // Then we directly short-circuit and return `Nothing`.
+            // This is analogous to composing the `Maybe` monad with
+            // the Kleisli arrow `(>=>)`, or monadic composition `chain`, with
+            // `(>=>) :: Monad m => (a -> m b) -> (b -> m c) -> a -> m c`
+            // With `f :: Monad m => a -> m b` and
+            // `g :: Monad m => b -> m c`
             return g();
     };
 }
@@ -36,6 +43,8 @@ std::function<optional<C>(A)> composeOptional(
 template <class A>
 optional<A> identityOptional(A a)
 {
+    // This is in fact `return :: Monad m => a -> m a` which is necessary
+    // to introduce a layer of wrapper around some value `a`.
     return optional(a);
 }
 ```
