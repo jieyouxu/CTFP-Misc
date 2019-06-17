@@ -48,3 +48,18 @@ optional<A> identityOptional(A a)
     return optional(a);
 }
 ```
+
+## Q2
+
+```c++
+// safe_reciprocal :: Double -> Maybe Double
+optional<double> safe_reciprocal(double n)
+{
+    if (x == 0)
+        // Nothing
+        return optional<double>{};
+    else
+        // Just Double
+        return optional<double>{ 1/x };
+}
+```
