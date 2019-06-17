@@ -69,4 +69,10 @@ optional<double> safe_reciprocal(double n)
 ```c++
 optional<double> safe_root_reciprocal =
     composeOptional(safe_reciprocal, safe_root);
+
+// This is in fact just
+// safe_reciprocal :: Double -> Maybe Double
+// safe_root :: Double -> Maybe Double
+// safe_root_reciprocal :: Double -> Maybe Double
+// safe_root_reciprocal = safe_reciprocal >=> safe_root
 ```
